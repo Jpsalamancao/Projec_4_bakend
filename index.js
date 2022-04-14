@@ -1,15 +1,21 @@
 const factory = ('./src/factory/factory.js');
 const validator = ('./src/utils/validateHeaders.js');
 
-exports.handler = async (event) => {
-    // TODO implement
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify('Hello from Lambda!'),
-    };
-    return response;
-};
+exports.handler = async (event, callback) => {
+    console.log('Received event:',event.body);
+    let handlerData= event.path.includes('/handlerdata')
 
+    if(!handlerData){
+        const response = {
+            statusCode: 400,
+            body: JSON.stringify('not found!'),
+        };
+    return response;
+    }
+
+    await factory.getMethod(event, callback);
+
+};
 
 
 
