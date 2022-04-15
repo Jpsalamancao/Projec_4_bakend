@@ -13,7 +13,10 @@ define('METHOD_FACTORY',{
     },
     "POST":{
         "recordsprocess":"postRecordsProcess",
-        
+        "addproducto":"postAddProducto",
+        "chargerawmaterial":"postChargeRawMaterial",
+        "performance":"postPerformance",
+        "qualityproduct":"postQualityProduct"        
     },
     "PUT":{
         
