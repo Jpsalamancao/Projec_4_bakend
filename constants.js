@@ -6,3 +6,19 @@ function define (name, value){
 }
 
 // importa las constantes segun factory
+
+define('METHOD_FACTORY',{
+    "GET":{
+        "recordsprocess":"getRecordsProcess",
+    },
+    "POST":{
+        "recordsprocess":"postRecordsProcess",
+        
+    },
+    "PUT":{
+        
+    },
+    "DELETE":{
+        
+    }
+})
