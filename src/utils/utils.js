@@ -1,10 +1,10 @@
 const constants = require('../../constants');
 
-exports.getResponse = (statusCode, body)=>{
-    console.log('ejecuta getResponse',statusCode);
-    return {
-        statusCode :statusCode,
-        body : JSON.stringify(body),
-        headers:{'prueba':'*'}
-    };
+exports.getResponse = (event)=>{
+    let resp = {
+        statusCode :200,
+        body : JSON.stringify(event.body),
+    }
+    console.log('ejecuta getResponse', resp);
+    return resp;
 };

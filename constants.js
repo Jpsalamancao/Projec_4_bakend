@@ -25,3 +25,5 @@ define('METHOD_FACTORY',{
         
     }
 })
+
+define('TOPIC',['record','addProduct','charger','perform','quality'])
